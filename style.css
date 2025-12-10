@@ -1,0 +1,135 @@
+* {
+    /*border: solid 1px black;*/
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    
+}    
+
+.calculatorBody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.calculatorTop{
+    height: 40px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.delete{
+    width: 40px;
+    aspect-ratio: 1/1;
+}
+.clear{
+    width: 90px;
+    height: 40px;
+}
+.equal{
+    width: 40px;
+    aspect-ratio: 1/1;
+}
+.calculatorBottomRowOne {
+    display: flex;
+    flex-grow: 1 2 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calculatorBottomRowOne button {
+    margin: 5px;
+}
+
+.calculatorBottomRowTwo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calculatorBottomRowTwo button {
+    width: 40px;
+    aspect-ratio: 1/1;
+    margin: 5px;
+}
+
+.calculatorBottomRowThree {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calculatorBottomRowThree button{
+    width: 40px;
+    aspect-ratio: 1/1;
+    margin: 5px;
+}
+
+.calculatorBottomRowFour {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calculatorBottomRowFour button{
+    width: 40px;
+    aspect-ratio: 1/1;
+    margin: 5px;
+}
+
+.calculatorBottomRowFive {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.calculatorBottomRowFive button{
+    width: 40px;
+    aspect-ratio: 1/1;
+    margin: 5px;
+}
