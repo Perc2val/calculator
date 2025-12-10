@@ -1,19 +1,65 @@
-function add(a, b) {
-    let result = a + b;
-    return result;
+let numberOne = 0;
+let operator = "plus";
+let numberTwo = 0;
+
+function add(numberOne, numberTwo) {
+    partResult = numberOne + numberTwo;
+    return partResult;
 }
 
-function subtract(a, b) {
-    let result = a - b;
-    return result;
+function subtract(numberOne, numberTwo) {
+    partResult = numberOne - numberTwo;
+    return partResult;
 }
 
-function multiply(a, b) {
-    let result = a * b;
-    return result
+function multiply(numberOne, numberTwo) {
+    partResult = numberOne * numberTwo;
+    return partResult;
 }
 
-function divide(a, b) {
-    let result = a/b;
-    return result;
+function divide(numberOne, numberTwo) {
+    partResult = numberOne/numberTwo;
+    return partResult;
 }
+
+
+
+function operate(numberOne, numberTwo, operator) {
+    if (operator == "plus") {
+        add(numberOne, numberTwo);
+    } else if (operator == "minus") {
+        subtract(numberOne, numberTwo)
+    } else if (operator == "multiply") {
+        multiply(numberOne, numberTwo)
+    } else if (operator == "divide") {
+        divide(numberOne, numberTwo)
+    }
+    return partResult;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
