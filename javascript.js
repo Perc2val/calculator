@@ -305,7 +305,7 @@ eqaul.addEventListener("click", (e)=> {
     p.textContent = partResult;
     numberOne = partResult;
     numberTwo = "";
-    operator = "";
+    operator = "plus";
     console.log(partResult)
 })
 /* if there is a second operator clicked just equal the first and then add the second operator*/
