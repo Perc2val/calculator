@@ -304,7 +304,7 @@ function operate(numberOne, numberTwo, operator) {
 
 eqaul.addEventListener("click", (e)=> {
     operate(+numberOne, +numberTwo, operator)
-    if (numberTwo == 0) {
+    if (operator === "divide" && +numberTwo === 0) {
         let info = "Cant share with 0 friends"
         p.textContent = info;
         numberOne = "";
