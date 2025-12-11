@@ -21,6 +21,7 @@ const divi = document.querySelector(".divide");
 const eqaul = document.querySelector(".equal");
 const clear = document.querySelector(".clear");
 const dot = document.querySelector(".dot")
+const del = document.querySelector(".delete")
 const p = document.createElement("p")
 calculatorTop.appendChild(p)
 
@@ -50,7 +51,23 @@ dot.addEventListener("click", (e)=>{
     }
 })
 
-
+del.addEventListener("click", (e)=> {
+    if (operator == ""){
+            if(numberOne ==""){
+                return
+            }
+            numberOne = numberOne.slice(0, -1)
+            p.textContent = numberOne;
+            console.log("hun" + numberOne)
+    } else {
+        if(numberTwo ==""){
+                return
+            }
+            numberTwo = numberTwo.slice(0, -1)
+            p.textContent = numberTwo;
+            console.log("nun" + numberTwo)
+    }
+})
 
 zero.addEventListener("click", (e)=> {
     if (numberOne == partResult) {
@@ -241,38 +258,6 @@ nine.addEventListener("click", (e)=> {
             console.log("num" + numberTwo)
     }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
