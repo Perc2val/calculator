@@ -310,7 +310,7 @@ eqaul.addEventListener("click", (e)=> {
 })
 /* if there is a second operator clicked just equal the first and then add the second operator*/
 plus.addEventListener("click", (e)=> {
-    if (operator == "plus"){ 
+    if (operator !== ""){ 
         operate(+numberOne, +numberTwo, operator)
         p.textContent = partResult;
         numberOne = partResult;
@@ -325,7 +325,7 @@ plus.addEventListener("click", (e)=> {
 })
 
 minus.addEventListener("click", (e)=> {
-    if (operator == "minus"){ 
+    if (operator !== ""){ 
         operate(+numberOne, +numberTwo, operator)
         p.textContent = partResult;
         numberOne = partResult;
@@ -340,7 +340,7 @@ minus.addEventListener("click", (e)=> {
 });
 
 multi.addEventListener("click", (e)=> {
-    if (operator == "multiply"){ 
+    if (operator !== ""){ 
         operate(+numberOne, +numberTwo, operator)
         p.textContent = partResult;
         numberOne = partResult;
@@ -355,7 +355,7 @@ multi.addEventListener("click", (e)=> {
 })
 
 divi.addEventListener("click", (e)=> {
-   if (operator == "divide"){ 
+   if (operator !== ""){ 
         operate(+numberOne, +numberTwo, operator)
         p.textContent = partResult;
         numberOne = partResult;
