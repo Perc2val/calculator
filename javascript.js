@@ -20,6 +20,7 @@ const multi = document.querySelector(".multiply");
 const divi = document.querySelector(".divide");
 const eqaul = document.querySelector(".equal");
 const clear = document.querySelector(".clear");
+const dot = document.querySelector(".dot")
 const p = document.createElement("p")
 calculatorTop.appendChild(p)
 
@@ -31,7 +32,23 @@ clear.addEventListener("click", (e)=>{
 })
 
 
-
+dot.addEventListener("click", (e)=>{
+    if (operator == ""){
+            if(numberOne.includes(".")){
+                return
+            }
+            numberOne += "."
+            p.textContent = numberOne;
+            console.log("hun" + numberOne)
+        } else {
+            if(numberTwo.includes(".")){
+                return
+            }
+            numberTwo += ".";
+            p.textContent = numberTwo;
+            console.log("num" + numberTwo)
+    }
+})
 
 
 
