@@ -302,6 +302,15 @@ function operate(numberOne, numberTwo, operator) {
 
 eqaul.addEventListener("click", (e)=> {
     operate(+numberOne, +numberTwo, operator)
+    if (numberTwo == 0) {
+        let info = "Cant share with 0 friends"
+        p.textContent = info;
+        numberOne = "";
+        numberTwo = "";
+        operator = "";
+        partResult = "";
+        return 
+    }
     p.textContent = partResult;
     numberOne = partResult;
     numberTwo = "";
@@ -310,8 +319,17 @@ eqaul.addEventListener("click", (e)=> {
 })
 /* if there is a second operator clicked just equal the first and then add the second operator*/
 plus.addEventListener("click", (e)=> {
-    if (operator !== ""){ 
+    plusBreak: if (operator !== ""){
         operate(+numberOne, +numberTwo, operator)
+         if (partResult == Number.POSITIVE_INFINITY){
+            let info = "Cant share with 0 friends";
+            p.textContent = info;
+            numberOne = "";
+            numberTwo = "";
+            operator = "";
+            partResult = "";
+            break plusBreak;
+        }
         p.textContent = partResult;
         numberOne = partResult;
         numberTwo = "";
@@ -325,8 +343,17 @@ plus.addEventListener("click", (e)=> {
 })
 
 minus.addEventListener("click", (e)=> {
-    if (operator !== ""){ 
+    minusBreak: if (operator !== ""){ 
         operate(+numberOne, +numberTwo, operator)
+        if (partResult == Number.POSITIVE_INFINITY){
+            let info = "Cant share with 0 friends";
+            p.textContent = info;
+            numberOne = "";
+            numberTwo = "";
+            operator = "";
+            partResult = "";
+            break minusBreak;
+        }
         p.textContent = partResult;
         numberOne = partResult;
         numberTwo = "";
@@ -340,8 +367,17 @@ minus.addEventListener("click", (e)=> {
 });
 
 multi.addEventListener("click", (e)=> {
-    if (operator !== ""){ 
+    multiBreak: if (operator !== ""){
         operate(+numberOne, +numberTwo, operator)
+        if (partResult == Number.POSITIVE_INFINITY){
+            let info = "Cant share with 0 friends";
+            p.textContent = info;
+            numberOne = "";
+            numberTwo = "";
+            operator = "";
+            partResult = "";
+            break multiBreak;
+        }
         p.textContent = partResult;
         numberOne = partResult;
         numberTwo = "";
@@ -355,15 +391,24 @@ multi.addEventListener("click", (e)=> {
 })
 
 divi.addEventListener("click", (e)=> {
-   if (operator !== ""){ 
-        operate(+numberOne, +numberTwo, operator)
-        p.textContent = partResult;
-        numberOne = partResult;
-        numberTwo = "";
-        operator = "";
-        console.log(partResult)
-        operator = "divide";
-        partResult = "";
+   diviBreak: if (operator !== ""){
+            operate(+numberOne, +numberTwo, operator)
+            if (partResult == Number.POSITIVE_INFINITY){
+            let info = "Cant share with 0 friends";
+            p.textContent = info;
+            numberOne = "";
+            numberTwo = "";
+            operator = "";
+            partResult = "";
+            break diviBreak;
+        }
+            p.textContent = partResult;
+            numberOne = partResult;
+            numberTwo = "";
+            operator = "";
+            console.log(partResult)
+            operator = "divide";
+            partResult = "";
     } else {
         operator = "divide";
     }
