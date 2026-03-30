@@ -1,6 +1,7 @@
 let numberOne = "";
 let numberTwo = "";
 let operator = "";
+let result = "";
 const zero = document.querySelector(".zero")
 const one = document.querySelector(".one");
 const two = document.querySelector(".two");
@@ -13,54 +14,140 @@ const eight = document.querySelector(".eight");
 const nine = document.querySelector(".nine");
 const display = document.querySelector(".calcdisplay");
 const p = document.createElement("p");
+const divideButton = document.querySelector(".divide");
+const multiplyButton = document.querySelector(".multiply");
+const minusButton = document.querySelector(".minus");
+const plusButton = document.querySelector(".plus");
+const equal = document.querySelector(".equal");
 
+equal.addEventListener("click", ()=>{
+    if(numberOne != ""||numberTwo != ""){
+        operate(numberOne, numberTwo, operator);
+        numberOne = result;
+        operator = "";
+        numberTwo = "";
+        updateDisplay();
+        result = "";
+    }
+});
 
-
+divideButton.addEventListener("click", ()=> {
+    if (operator == ""){
+        operator = "divide";
+        updateDisplay();
+    } else {
+        operate(numberOne, numberTwo, operator);
+        numberOne = result;
+        operator = "divide";
+        numberTwo = "";
+        updateDisplay();
+    }
+    
+});
+multiplyButton.addEventListener("click", ()=> {
+    operator = "multiply"
+});
+minusButton.addEventListener("click", ()=> {
+    operator = "minus"
+});
+plusButton.addEventListener("click", ()=> {
+    operator = "plus"
+});
 
 
 zero.addEventListener("click", ()=>{
-    numberOne += 0;
-    updateDisplay();
+    if (operator == ""){
+        numberOne += 0;
+        updateDisplay();
+    } else {
+        numberTwo += 0;
+        updateDisplay();
+    }
 });
 one.addEventListener("click", ()=>{
-    numberOne += 1;
-    updateDisplay();
+    if (operator == ""){
+        numberOne += 1;
+        updateDisplay();
+    } else {
+        numberTwo += 1;
+        updateDisplay();
+    }
 });
 two.addEventListener("click", ()=>{
-    numberOne += 2;
-    updateDisplay();
+    if (operator == ""){
+        numberOne += 2;
+        updateDisplay();
+    } else {
+        numberTwo += 2;
+        updateDisplay();
+    }
 });
 three.addEventListener("click", ()=>{
-    numberOne += 3;
-    updateDisplay();
+    if (operator == ""){
+        numberOne += 3;
+        updateDisplay();
+    } else {
+        numberTwo += 3;
+        updateDisplay();
+    }
 });
 four.addEventListener("click", ()=>{
-    numberOne += 4;
-    updateDisplay();
+    if (operator == ""){
+        numberOne += 4;
+        updateDisplay();
+    } else {
+        numberTwo += 4;
+        updateDisplay();
+    }
 });
 five.addEventListener("click", ()=>{
-    numberOne += 5;
-    updateDisplay();
+    if (operator == ""){
+        numberOne += 5;
+        updateDisplay();
+    } else {
+        numberTwo += 5;
+        updateDisplay();
+    }
 });
 six.addEventListener("click", ()=>{
-    numberOne += 6;
-    updateDisplay();
+    if (operator == ""){
+        numberOne += 6;
+        updateDisplay();
+    } else {
+        numberTwo += 6;
+        updateDisplay();
+    }
 });
 seven.addEventListener("click", ()=>{
-    numberOne += 7;
-    updateDisplay();
+    if (operator == ""){
+        numberOne += 7;
+        updateDisplay();
+    } else {
+        numberTwo += 7;
+        updateDisplay();
+    }
 });
 eight.addEventListener("click", ()=>{
-    numberOne += 8;
-    updateDisplay();
+    if (operator == ""){
+        numberOne += 8;
+        updateDisplay();
+    } else {
+        numberTwo += 8;
+        updateDisplay();
+    }
 });
 nine.addEventListener("click", ()=>{
-    numberOne += 9;
-    updateDisplay();
+    if (operator == ""){
+        numberOne += 9;
+        updateDisplay();
+    } else {
+        numberTwo += 9;
+        updateDisplay();
+    }
 });
 
 function add(numberOne, numberTwo){
-    return numberOne + numberTwo;
+    return +numberOne + +numberTwo;
 };
 
 function subtract(numberOne, numberTwo){
@@ -77,20 +164,31 @@ function divide(numberOne, numberTwo){
 
 function operate(numberOne, numberTwo, operator){
     if(operator == "plus"){
-        return add(numberOne, numberTwo);
+        result = add(numberOne, numberTwo);
     } else if (operator == "minus"){
-        return subtract(numberOne, numberTwo);
-    } else if (operator == "multi"){
-        return multiply(numberOne, numberTwo);
-    } else if (operator == "divi") {
-        return divide(numberOne, numberTwo);
+        result = subtract(numberOne, numberTwo);
+    } else if (operator == "multiply"){
+        result = multiply(numberOne, numberTwo);
+    } else if (operator == "divide") {
+        result = divide(numberOne, numberTwo);
     };
 };
 
 function updateDisplay(){
     display.appendChild(p);
     p.classList.add("displayNumber")
-    p.textContent = numberOne;
+    if (result == ""){
+        if (operator == ""){
+            p.textContent = numberOne;
+        } else if (numberTwo == ""){
+            p.textContent = operator;
+        } else {
+            p.textContent = numberTwo;
+        }
+    } else {
+        p.textContent = result;
+    }
+    
 };
 
 function clearDisplay(){
