@@ -26,7 +26,7 @@ function operate(numberOne, numberTwo, operator){
         return subtract(numberOne, numberTwo);
     } else if (operator == "multi"){
         return multiply(numberOne, numberTwo);
-    } else {
+    } else if (operator == "divi") {
         return divide(numberOne, numberTwo);
     };
 };
