@@ -22,9 +22,16 @@ body{
     padding: 32px;
 }
 .calcdisplay{
+    display: flex;
+    justify-content: end;
+    align-items: center;
     height: 64px;
     width: 100%;
     border: solid 1px black;
+}
+.displayNumber{
+    margin: 16px;
+    font-size: 200%;
 }
 button{
     padding: 16px;
