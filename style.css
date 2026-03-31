@@ -22,14 +22,32 @@ body{
     padding: 32px;
 }
 .calcdisplay{
-    display: flex;
-    justify-content: end;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-row: 1fr;
     height: 64px;
     width: 100%;
     border: solid 1px black;
 }
+.calcdisplaynumber{
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+}
+.calcdisplayoperator{
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+}
 .displayNumber{
+    margin: 16px;
+    font-size: 200%;
+}
+.displayOperator{
     margin: 16px;
     font-size: 200%;
 }
