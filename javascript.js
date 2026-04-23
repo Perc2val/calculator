@@ -71,16 +71,18 @@ minusButton.addEventListener("click", ()=> {
     }
 });
 plusButton.addEventListener("click", ()=> {
-    updateDisplayOperator();
+
     if (numberOne != "" && numberTwo != "" && operator != ""){
         operate(numberOne, numberTwo, operator);
         numberOne = result;
         numberTwo = "";
         updateDisplay();
+        operator = "";
+        updateDisplayOperator();
         result = "";
     } else if (operator == ""){
         operator = "plus";
-        updateDisplay();
+        updateDisplayOperator();
     } else {
        
     }
@@ -228,7 +230,7 @@ function updateDisplayOperator(){
     if (operator == ""){
         return
     }
-    p.textContent = operator;
+    pOperator.textContent = operator;
 }
 
 function clearDisplay(){
